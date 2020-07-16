@@ -18,5 +18,16 @@ singleuser:
     name: gordonwatts/uw-gwatts-notebook-server
     tag: master
 
+proxy:
+  https:
+    enabled: false
+
+# proxy:
+#   https:
+#     hosts:
+#       - <your-domain-name>
+#     letsencrypt:
+#       contactEmail: <your-email-address>
+
 auth:
   type: github
