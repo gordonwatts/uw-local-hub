@@ -1,0 +1,19 @@
+# Config for making it useful for me.
+# https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub/index.html
+# Make sure to include the secret token for use!
+#
+
+# Default to using jupyter lab
+singleuser:
+  defaultUrl: "/lab"
+  storage:
+    extraVolumes:
+      - name: servicex-shared
+        persistentVolumeClaim:
+          claimName: servicex-cache-claim
+    extraVolumeMounts:
+      - name: servicex-shared
+        mountPath: /home/servicex_cache
+
+auth:
+  type: github
