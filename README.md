@@ -27,6 +27,10 @@ auth:
     clientId: "<from OAuth on github>"
     clientSecret: "<from OAuth on github>"
     callbackUrl: "http://<url>/hub/oauth_callback"
+
+whitelist:
+  users:
+    - <github-usernames>
 ```
 
 ### Then to start it up
