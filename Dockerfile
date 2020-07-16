@@ -14,4 +14,9 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y kubectl
 RUN sudo apt-get install -y vim
 
+# Jupyter config
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
+RUN jupyter lab build
+
+# Reset to be "safe"
 USER nobody
