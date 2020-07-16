@@ -14,6 +14,9 @@ singleuser:
     extraVolumeMounts:
       - name: servicex-shared
         mountPath: /home/servicex_cache
+  image:
+    name: gordonwatts/uw-gwatts-notebook-server
+    tag: master
 
 auth:
   type: github
