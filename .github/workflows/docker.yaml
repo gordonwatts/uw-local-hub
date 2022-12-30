@@ -22,7 +22,7 @@ jobs:
       id: extract_tag_name
 
     - name: Build Jupyter Hub
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         dockerfile: Dockerfile
         name: gordonwatts/uw-gwatts-notebook-server:${{ steps.extract_tag_name.outputs.imagetag }}
